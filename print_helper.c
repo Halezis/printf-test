@@ -20,7 +20,7 @@ void print_helper(char specifier, va_list print_arg)
 			case 's':
 				str = va_arg(print_arg, char *);
 				if (str == NULL)
-					str ="(null)";
+					str = "(null)";
 				_puts(str);
 				break;
 			case '%':
