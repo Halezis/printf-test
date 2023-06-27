@@ -11,6 +11,7 @@ int print_helper(char specifier, va_list print_arg)
 	int arg;
 	char *str;
 	int count;
+	unsigned int arg_b;
 
 	count = 0;
 	switch (specifier)
@@ -33,7 +34,11 @@ int print_helper(char specifier, va_list print_arg)
 			case 'i':
 			case 'd':
 				arg = va_arg(print_arg, int);
-				printdig(arg, &count);
+				print_dig(arg, &count);
+				break;
+			case 'b':
+				arg_b = va_arg(print_arg, unsigned int);
+				print_binary(arg_b, &count);
 				break;
 			}
 	return (count);

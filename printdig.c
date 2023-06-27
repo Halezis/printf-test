@@ -7,7 +7,7 @@
  * Return: Nothing
 */
 
-void printdig(int num, int *count)
+void print_dig(int num, int *count)
 {
 	int x, temp, digits, digit, divisor;
 

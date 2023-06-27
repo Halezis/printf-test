@@ -8,7 +8,8 @@
 /*function prototypes*/
 int _printf(const char *format, ...);
 int print_helper(char specifier, va_list print_arg);
-void printdig(int num, int *count);
+void print_dig(int num, int *count);
+void print_binary(unsigned int arg, int *count);
 int _putchar(char c);
 int _puts(char *str);
 
