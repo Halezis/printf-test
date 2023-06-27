@@ -9,6 +9,8 @@
 
 void printdig(int num, int *count)
 {
+	int x, temp, digits, divisor;
+
 	if (num < 0)
 	{
 		_putchar('-');
@@ -22,11 +24,27 @@ void printdig(int num, int *count)
 		return;
 	}
 
-	if (num >= 10)
+	temp = num;
+	digits = 0;
+
+	while (temp != 0)
 	{
-		printdig(num / 10, count);
+		temp /= 10;
+		digits++;
 	}
 
-	_putchar('0' + (num % 10));
-	(*count)++;
+	divisor = 1;
+	for (x = 1; x < digits; x++)
+	{
+		divisor *= 10;
+	}
+
+	while (divisor != 0)
+	{
+		int digit = num / divisor;
+		_putchar('0' + digit);
+		(*count)++;
+		num %= divisor;
+		divisor /= 10;
+	}
 }

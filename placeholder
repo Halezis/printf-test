@@ -1,0 +1,7 @@
+	if (num >= 10)
+	{
+		printdig(num / 10, count);
+	}
+
+	_putchar('0' + (num % 10));
+	(*count)++;
