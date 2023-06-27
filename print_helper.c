@@ -8,14 +8,13 @@
 void print_helper(char specifier, va_list print_arg)
 {
 	int arg;
-	char charr;
 	char *str;
 
 	switch (specifier)
 			{
 			case 'c':
-				charr = va_arg(print_arg, int);
-				_putchar(charr);
+				arg = va_arg(print_arg, int);
+				_putchar(arg);
 				break;
 			case 's':
 				str = va_arg(print_arg, char *);
