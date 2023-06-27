@@ -26,14 +26,14 @@ int _printf(const char *format, ...)
 			spec = format[x];
 			if (spec == 'c' || spec == 's' || spec == '%' || spec == 'i' || spec == 'd')
 			{
-				print_helper(spec, print_arg);
+				len += print_helper(spec, print_arg);
 			}
 		}
 		else
 		{
 			_putchar(format[x]);
+			len++;
 		}
-		len++;
 		x++;
 	}
 	va_end(print_arg);

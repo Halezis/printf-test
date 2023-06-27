@@ -7,10 +7,9 @@
 
 /*function prototypes*/
 int _printf(const char *format, ...);
-void print_helper(char specifier, va_list print_arg);
-void printdig(int num);
+int print_helper(char specifier, va_list print_arg);
+void printdig(int num, int *count);
 int _putchar(char c);
-void _puts(char *str);
-int _strlen(const char *s);
+int _puts(char *str);
 
 #endif /*MAIN_H*/

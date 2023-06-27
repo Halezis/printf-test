@@ -6,18 +6,20 @@
  * Return: Nothing
 */
 
-void printdig(int num)
+void printdig(int num, int *count)
 {
 	if (num < 0)
 	{
 		_putchar('-');
+		(*count)++;
 		num = -num;
 	}
 
 	if (num >= 10)
 	{
-		printdig(num / 10);
+		printdig(num / 10, count);
 	}
 
 	_putchar('0' + (num % 10));
+	(*count)++;
 }

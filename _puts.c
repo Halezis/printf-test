@@ -6,11 +6,17 @@
  * Return: Always 0.
  */
 
-void _puts(char *str)
+int _puts(char *str)
 {
+	int count;
+
+	count = 0;
 	while (*str != '\0')
 	{
 		_putchar(*str);
+		count++;
 		str++;
 	}
+
+	return (count);
 }
