@@ -33,7 +33,7 @@ int print_helper(char specifier, va_list print_arg)
 			case 'i':
 			case 'd':
 				arg = va_arg(print_arg, int);
-				count += printdig(arg);
+				printdig(arg, &count);
 				break;
 			}
 	return (count);

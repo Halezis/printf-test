@@ -7,29 +7,26 @@
  * Return: Nothing
 */
 
-int printdig(int num)
+void printdig(int num, int *count)
 {
-	int count;
-
-	count = 0;
 	if (num < 0)
 	{
 		_putchar('-');
-		count++;
+		(*count)++;
 		num = -num;
 	}
 	else if (num == 0)
 	{
 		_putchar('0');
-		count++;
+		(*count)++;
+		return;
 	}
 
 	if (num >= 10)
 	{
-		count++;
-		printdig(num / 10);
+		printdig(num / 10, count);
 	}
 
 	_putchar('0' + (num % 10));
-	return (count);
+	(*count)++;
 }
