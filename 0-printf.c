@@ -24,7 +24,8 @@ int _printf(const char *format, ...)
 		{
 			x++;
 			spec = format[x];
-			if (spec == 'c' || spec == 's' || spec == '%' || spec == 'i' || spec == 'd')
+			if (spec == 'c' || spec == 's' || spec == '%'
+				|| spec == 'i' || spec == 'd')
 			{
 				len += print_helper(spec, print_arg);
 			}

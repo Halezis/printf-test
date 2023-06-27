@@ -12,6 +12,7 @@ int main(void)
     int len;
     int len2;
     char *str = "Hhdhhggfgfjjj";
+    int num = 123457;
     unsigned int ui;
     /*void *addr;*/
 
@@ -23,6 +24,10 @@ int main(void)
     printf("Length:[%d, %i]\n", len2, len2);
     len =_printf("Testing a %s\n", str);
     len2 =printf("Testing a %s\n", str);
+     _printf("Length:[%d, %i]\n", len, len);
+    printf("Length:[%d, %i]\n", len2, len2);
+    len =_printf("Testing a %d\n", num);
+    len2 =printf("Testing a %d\n", num);
      _printf("Length:[%d, %i]\n", len, len);
     printf("Length:[%d, %i]\n", len2, len2);
     _printf("Negative:[%d]\n", -762534);

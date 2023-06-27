@@ -3,6 +3,7 @@
 /**
  * printdig - Handles conversion and print of integer and decimal nums
  * @num: number to be printed
+ * @count: number of characters printed
  * Return: Nothing
 */
 
