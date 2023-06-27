@@ -8,9 +8,10 @@
 
 void print_binary(unsigned int arg, int *count)
 {
-	unsigned int mask = 1 << (sizeof(unsigned int) * 8 - 1);
-	int started = 0;
+	unsigned int extract;
+	int printed = 0;
 
+	extract = 1 << (sizeof(unsigned int) * 8 - 1);
 	if (arg == 0)
 	{
 		_putchar('0');
@@ -18,20 +19,20 @@ void print_binary(unsigned int arg, int *count)
 		return;
 	}
 
-	while (mask > 0)
+	while (extract > 0)
 	{
-		if (arg & mask)
+		if (arg & extract)
 		{
 			_putchar('1');
 			(*count)++;
-			started = 1;
+			printed = 1;
 		}
-		else if (started)
+		else if (printed)
 		{
 			_putchar('0');
 			(*count)++;
 		}
 
-		mask >>= 1;
+		extract >>= 1;
 	}
 }
