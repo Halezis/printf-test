@@ -32,6 +32,8 @@ int main(void)
     printf("Character:[%c]\n", 'H');
     _printf("String:[%s]\n", "I am a string !");
     printf("String:[%s]\n", "I am a string !");
+    _printf("hello %c my name\n", 'K');
+    printf("hello %c my name\n", 'K');
     /*_printf("Address:[%p]\n", addr);
     printf("Address:[%p]\n", addr);*/
     len = _printf("Percent:[%%]\n");

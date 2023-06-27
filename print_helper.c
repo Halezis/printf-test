@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * print_helper - A helper function to print args depending on format
@@ -9,14 +8,14 @@
 void print_helper(char specifier, va_list print_arg)
 {
 	int arg;
-	char argg;
+	char charr;
 	char *str;
 
 	switch (specifier)
 			{
 			case 'c':
-				argg = va_arg(print_arg, int);
-				_putchar(argg);
+				charr = va_arg(print_arg, int);
+				_putchar(charr);
 				break;
 			case 's':
 				str = va_arg(print_arg, char *);
