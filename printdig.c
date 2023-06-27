@@ -15,6 +15,12 @@ void printdig(int num, int *count)
 		(*count)++;
 		num = -num;
 	}
+	else if (num == 0)
+	{
+		_putchar('0');
+		(*count)++;
+		return;
+	}
 
 	if (num >= 10)
 	{
