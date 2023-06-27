@@ -18,7 +18,7 @@ int print_helper(char specifier, va_list print_arg)
 			case 'c':
 				arg = va_arg(print_arg, int);
 				_putchar(arg);
-				count ++;
+				count++;
 				break;
 			case 's':
 				str = va_arg(print_arg, char *);

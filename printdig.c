@@ -9,7 +9,7 @@
 
 void printdig(int num, int *count)
 {
-	int x, temp, digits, divisor;
+	int x, temp, digits, digit, divisor;
 
 	if (num < 0)
 	{
@@ -41,7 +41,7 @@ void printdig(int num, int *count)
 
 	while (divisor != 0)
 	{
-		int digit = num / divisor;
+		digit = num / divisor;
 		_putchar('0' + digit);
 		(*count)++;
 		num %= divisor;
